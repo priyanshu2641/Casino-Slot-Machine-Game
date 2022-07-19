@@ -1,0 +1,89 @@
+:root {
+    --speed: 5;
+}
+
+.name{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.machine {
+    background-color: rgb(11, 11, 201);
+    border: solid rgb(2, 2, 55) 5px;
+    height: 480px;
+    width: 1380px;
+    margin: 50px;
+    z-index: 5;
+
+    display: flex;
+}
+
+#inpSpeed {
+    font-size: 30pt;
+    margin-left: 30px;
+    width: 50px;
+}
+
+
+.slot {
+    height: 420px;
+    width: 420px;
+    margin: 20px;
+    overflow: hidden;
+    border: solid rgb(2, 2, 55) 5px;
+
+    z-index: 1;
+
+    background-color: beige;
+    border: solid darkblue 2 px;
+    text-align: center;
+    font-size: 180pt;
+    line-height: 250px;
+}
+
+.slot > .value {
+    z-index: 3;
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s / var(--speed));
+}
+
+@keyframes slotspin {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(200px)
+    }
+}
+
+.buttonInput
+{
+    display: inline-flex;
+}
+
+label
+{   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25pt;
+    display: flex;
+}
+
+#stop
+{   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 150px;
+    background-color: rgb(42, 42, 228);
+    font-size: 25pt;
+    color: white;
+    box-shadow: 2px 2px rgb(6, 6, 55);
+}
+#spin
+{   
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 200px;
+    background-color: rgb(42, 42, 228);
+    color: white;
+    font-size: 25pt;
+    box-shadow: 2px 2px rgb(6, 6, 55);
+}
